@@ -1,0 +1,18 @@
+(a) Unigram with Vocab Size 1000 and 2000: Both versions of the unigram tokenization show relatively low precision, recall, and F-score.       	The precision and recall increase slightly when using a larger vocabulary size.
+	Unigram tokenization doest not perfoem good because generated tokens are very noisy so calculated values are 0.0
+	but when we cleaned tokens then results become better.
+
+(b) BPE (Byte Pair Encoding) with Vocab Size 1000 and 2000: BPE tokenization performs poorly in terms of precision, recall, and F-score 	compared to other methods, with very low values observed for all metrics.
+	similarly for BPE  tokenization doest not perfoem good because generated tokens are very noisy so calculated values are near to 0.0. 	but after cleaning results became quite well. and also vocab size 1000 to 2000 does not have significant effect.
+
+(c) Whitespace Tokenization: Using whitespace tokenization shows higher precision, recall, and F-score compared to other tokenization 	methods. It achieves the highest precision and recall among all methods.
+
+(d) mBERT with Max Length 1000 and 2000: Both versions of mBERT exhibit similar precision, recall, and F-score. These scores are moderate, 	falling between those of unigram and whitespace tokenization.max length does not have significant effect.
+
+(e) when using IndicBERT with both a maximum length of 1000 and 2000, the precision, recall, and F-score remain the same. This suggests 	that increasing the maximum length from 1000 to 2000 doesn't lead to any improvement in performance for the given task.
+
+overall:
+Whitespace tokenization appears to be the most effective method among those tested, with the highest precision, recall, and F-score.
+Unigram tokenization performs better than BPE, but still shows lower performance compared to whitespace tokenization.
+mBERT shows moderate performance, but it doesn't seem to improve significantly when increasing the max length from 1000 to 2000.
+
